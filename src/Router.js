@@ -30,13 +30,24 @@ const ProtectedRouter = ({component: Component, ...rest}) => {
     )
 };
 
+// const Router = () => {
+//     return (
+//         <Switch>
+//             <Route path="/login" component={Login} />
+//             <ProtectedRoute exact path="/" component={Home} />
+//             <ProtectedRoute path="/about" component={About} />
+//             <ProtectedRoute path="/car/:id" component={Car} />
+//         </Switch>
+//     );
+// };
+
 const Router = () => {
     return (
         <Switch>
             <Route path="/login" component={Login} />
-            <ProtectedRoute exact path="/" component={Home} />
-            <ProtectedRoute path="/about" component={About} />
-            <ProtectedRoute path="/car/:id" component={Car} />
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/car/:id" component={Car} />
         </Switch>
     );
 };
