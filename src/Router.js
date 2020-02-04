@@ -12,6 +12,10 @@ const checkAuth = () => {
     return cookies["loggedIn"] ? true : false
 }
 // Check the cookies for a cookie called "loggedIn"
+const checkAuth = () => {
+    const cookies = cookie.parse(document.cookie)
+    return cookies["loggedIn"] ? true : false
+}
 
 
 // Write ProtectedRoute function here
